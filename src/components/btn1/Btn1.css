@@ -1,0 +1,14 @@
+.btn-1 {
+  background-color: var(--colorGreen1);
+  color: var(--colorWhite);
+  transition: all 0.5s;
+  font-size: 15px;
+}
+.btn-1:hover {
+  background-color: var(--colorGreen3) !important;
+}
+@media screen and (max-width: 678px) {
+  .btn-1 {
+    font-size: 12px;
+  }
+}

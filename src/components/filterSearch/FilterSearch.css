@@ -1,0 +1,24 @@
+.btn-search-filter {
+  background-color: var(--colorGreen1);
+  transition: all 0.3s;
+}
+.btn-search-filter:hover {
+  background-color: var(--colorGreen3);
+}
+
+@media screen and (max-width: 768px) {
+  .button-select-option {
+    border-radius: 10px;
+  }
+  .btn-search-filter {
+    border-radius: 10px;
+    width: 300px;
+  }
+  .wrapper-select-boxes {
+    flex-direction: column;
+    row-gap: 5px !important;
+  }
+  .con-select-box {
+    width: 100% !important;
+  }
+}

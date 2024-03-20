@@ -1,0 +1,26 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "agency": "",
+      "title": "",
+      "location": "",
+      "date": "",
+      "images": [],
+      "overview": [
+        { "landArea": "" },
+        { "numberOFtype": "" },
+        { "numberOFrooms": "" },
+        { "numberOFbathroom": "" },
+        { "yearOFconstraction": "" }
+      ],
+      "options": ["", "", "", "", ""],
+      "aboutProperty": "",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": ""
+      }
+    }
+  ]
+}
