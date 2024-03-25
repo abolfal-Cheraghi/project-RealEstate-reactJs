@@ -52,6 +52,14 @@ input[type="radio"] {
   accent-color: var(--colorGreen1);
 }
 
+/* logo customers */
+.logo-customers {
+  filter: grayscale(85);
+  transition: all 0.5s;
+}
+.logo-customers:hover {
+  filter: grayscale(0);
+}
 @media screen and (max-width: 992px) {
   .title-hero {
     width: 70% !important;

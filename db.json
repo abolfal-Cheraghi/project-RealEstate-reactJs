@@ -3,24 +3,527 @@
     {
       "id": 1,
       "agency": "",
-      "title": "",
-      "location": "",
-      "date": "",
-      "images": [],
-      "overview": [
-        { "landArea": "" },
-        { "numberOFtype": "" },
-        { "numberOFrooms": "" },
-        { "numberOFbathroom": "" },
-        { "yearOFconstraction": "" }
+      "title": "ویلا لوکس",
+      "location": "تهران",
+      "date": "4 روز پیش",
+      "for": "برای اجاره",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/27/2023/06/99321-1.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/27/2023/06/43611-2.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa53.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/27/2023/06/99321-1.jpg"
       ],
-      "options": ["", "", "", "", ""],
-      "aboutProperty": "",
+      "overview": {
+        "landArea": "2500",
+        "type": "آپارتمان",
+        "numberOFrooms": "سه ",
+        "numberOFbathroom": "یک",
+        "yearOFconstraction": "1397"
+      },
+      "options": [
+        "پارکینگ",
+        "بالکن",
+        "انباری",
+        "استخر",
+        "تهویه مطبوع",
+        "باربیکیو"
+      ],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+      "price": {
+        "deposit": "500000000",
+        "monthlyRent": "25000000",
+        "Buy": ""
+      }
+    },
+    {
+      "id": 2,
+      "agency": "",
+      "title": "ویلا 500 متری زعفرانیه",
+      "location": "تهران",
+      "date": "1ماه قبل ",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/26/2023/06/test-test-5.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/26/2023/06/nishan-tashi1.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa40.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa52.jpg"
+      ],
+      "overview": {
+        "landArea": "500",
+        "type": "آپارتمان",
+        "numberOFrooms": "چهار",
+        "numberOFbathroom": "یک",
+        "yearOFconstraction": "1400"
+      },
+      "options": [
+        "پارکینگ",
+        "بالکن",
+        "آسانسور",
+        "انباری",
+        "استخر",
+        "چمن",
+        "تهویه مطبوع",
+        "باربیکیو",
+        "سونا",
+        "سالن ورزش"
+      ],
+      "aboutProperty": "استخر و باربیکیو اختصاصی",
       "price": {
         "deposit": "",
         "monthlyRent": "",
+        "Buy": "5000000000"
+      }
+    },
+    {
+      "id": 3,
+      "agency": "",
+      "title": "آپارتمان تجاری 5 طبقه",
+      "location": "تهران",
+      "date": "5 روز پیش",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/27/2023/06/43611-2.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/27/2023/06/99321-1.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/jet-engine-forms/27/2023/06/43611-2.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa53.jpg"
+      ],
+      "overview": {
+        "landArea": "120",
+        "type": "آپارتمان",
+        "numberOFrooms": "یک",
+        "numberOFbathroom": "سه",
+        "yearOFconstraction": "1399"
+      },
+      "options": ["پارکینگ", "بالکن"],
+      "aboutProperty": "استخر روباز دارای سونا و جکوزی",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": "contact"
+      }
+    },
+    {
+      "id": 4,
+      "agency": "",
+      "title": "اپارتمان90متری",
+      "location": "آذربایجان شرقی",
+      "date": "10روز قبل",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa26.jpeg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa40.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa36.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa35.jpg"
+      ],
+      "overview": {
+        "landArea": "90",
+        "type": "آپارتمان",
+        "numberOFrooms": "دو",
+        "numberOFbathroom": "یک",
+        "yearOFconstraction": "1390"
+      },
+      "options": ["پارکینگ", "بالکن", "آسانسور", "انباری", "استخر"],
+      "aboutProperty": "بالکن دارد پارکینگ دارد",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": "900000000 "
+      }
+    },
+    {
+      "id": 5,
+      "agency": "",
+      "title": "فضای اداری شمال غربی",
+      "location": "اصفهان",
+      "date": "",
+      "for": "برای اجاره",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa14.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa15.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/nishan-tashi1.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa22.jpg"
+      ],
+      "overview": {
+        "landArea": "400",
+        "type": "ملک تجاری",
+        "numberOFrooms": "سه",
+        "numberOFbathroom": "یک",
+        "yearOFconstraction": "1397"
+      },
+      "options": ["پارکینگ", "انباری", "چمن", "سونا", "سالن ورزش"],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "230000000",
+        "monthlyRent": "6500000",
+        "Buy": ""
+      }
+    },
+    {
+      "id": 6,
+      "agency": "",
+      "title": "خانه ویلایی سبز مقرون به صرفه",
+      "location": "یزد",
+      "date": "10روز قبل",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa28.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa27.jpeg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa20.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/conact-us-pic-2.jpg"
+      ],
+      "overview": {
+        "landArea": "3500",
+        "type": "ویلا",
+        "numberOFrooms": "چهار",
+        "numberOFbathroom": "چهار",
+        "yearOFconstraction": "1394"
+      },
+      "options": [
+        "پارکینگ",
+        "بالکن",
+        "آسانسور",
+        "انباری",
+        "استخر",
+        "",
+        "چمن",
+        "تهویه مطبوع",
+        "باربیکیو",
+        "سونا",
+        "سالن ورزش"
+      ],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": "sold"
+      }
+    },
+    {
+      "id": 7,
+      "agency": "",
+      "title": "ملکی با نمای دریاچه مدرن",
+      "location": "اصفهان",
+      "date": "2روز قبل",
+      "for": "برای اجاره",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/conact-us-pic-2.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/99321-1.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/43611-1.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/vila34.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/test-test-5.jpg"
+      ],
+      "overview": {
+        "landArea": "569",
+        "type": "ویلا",
+        "numberOFrooms": "هیچ",
+        "numberOFbathroom": "هیچ",
+        "yearOFconstraction": "1385"
+      },
+      "options": ["انباری", "تهویه مطبوع", "سالن ورزش", "", ""],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "200000000",
+        "monthlyRent": "10000000",
+        "Buy": ""
+      }
+    },
+    {
+      "id": 8,
+      "agency": "",
+      "title": "لوکس ترین ملک تجاری",
+      "location": "آذربایجان شرقی",
+      "date": "10روز قبل",
+      "for": "برای اجاره",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa48.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa47.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa40.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa49.jpg"
+      ],
+      "overview": {
+        "landArea": "2000",
+        "type": "ملک تجاری",
+        "numberOFrooms": "هیچ",
+        "numberOFbathroom": "هیچ",
+        "yearOFconstraction": "1378"
+      },
+      "options": ["پارکینگ", "انباری", "تهویه مطبوع"],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "230000000",
+        "monthlyRent": "8000000",
+        "Buy": ""
+      }
+    },
+    {
+      "id": 9,
+      "agency": "",
+      "title": "خانه لوکس در تهران",
+      "location": "تهران",
+      "date": "20روز قبل",
+      "for": "برای اجاره",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa11.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa22.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa10.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa12.jpg"
+      ],
+      "overview": {
+        "landArea": "387",
+        "type": "آپارتمان",
+        "numberOFrooms": "دو",
+        "numberOFbathroom": "یک",
+        "yearOFconstraction": "1392"
+      },
+      "options": ["پارکینگ", "انباری", "استخر", "سونا", "سالن ورزش"],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "100000000",
+        "monthlyRent": "2000000",
+        "Buy": ""
+      }
+    },
+    {
+      "id": 10,
+      "agency": "",
+      "title": "آپارتمان سه اتاقه",
+      "location": "یزد",
+      "date": "10روز قبل",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa32.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/test-test-5.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/conact-us-pic-2.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/43611-1.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/99321-1.jpg"
+      ],
+      "overview": {
+        "landArea": "200",
+        "type": "آپارتمان",
+        "numberOFrooms": "سه",
+        "numberOFbathroom": "یک",
+        "yearOFconstraction": "1399"
+      },
+      "options": ["پارکینگ", "بالکن", "آسانسور", "انباری"],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": "2500000000"
+      }
+    },
+    {
+      "id": 11,
+      "agency": "",
+      "title": "آپارتمان مدرن با تیرک",
+      "location": "تهران",
+      "date": "4 روز پیش",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa36.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa47.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa48.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa40.jpg"
+      ],
+      "overview": {
+        "landArea": "1000",
+        "type": "ملک تجاری",
+        "numberOFrooms": "یک",
+        "numberOFbathroom": "دو",
+        "yearOFconstraction": "1379"
+      },
+      "options": ["بالکن", "انباری", "چمن", "باربیکیو", "سالن ورزش"],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": "12000000000"
+      }
+    },
+    {
+      "id": 12,
+      "agency": "",
+      "title": "مرکز خرید کاملا نو برای فروش",
+      "location": "یزد",
+      "date": "23روز قبل",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa23.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa24.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa48.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa47.jpg"
+      ],
+      "overview": {
+        "landArea": "8000",
+        "type": "ملک تجاری",
+        "numberOFrooms": "سه",
+        "numberOFbathroom": "دو",
+        "yearOFconstraction": "1393"
+      },
+      "options": [
+        "پارکینگ",
+        "بالکن",
+        "آسانسور",
+        "تهویه مطبوع",
+        "باربیکیو",
+        "سونا"
+      ],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": "7800000000"
+      }
+    },
+    {
+      "id": 13,
+      "agency": "",
+      "title": "خانه سه طبقه برای اجاره",
+      "location": "اصفهان",
+      "date": "5روز قبل",
+      "for": "برای اجاره",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa7.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa6.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa21.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/nishan-tashi1.jpg"
+      ],
+      "overview": {
+        "landArea": "600",
+        "type": "ویلا",
+        "numberOFrooms": "بیش از پنج",
+        "numberOFbathroom": "دو",
+        "yearOFconstraction": "1378"
+      },
+      "options": ["پارکینگ", "چمن", "تهویه مطبوع", "سونا"],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.500",
+      "price": {
+        "deposit": "500000000",
+        "monthlyRent": "15000000",
+        "Buy": ""
+      }
+    },
+    {
+      "id": 14,
+      "agency": "",
+      "title": "آپارتمان مجلل",
+      "location": "آذربایجان شرقی",
+      "date": "9روز قبل",
+      "for": "برای فروش",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa28.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa23.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa24.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa22.jpg"
+      ],
+      "overview": {
+        "landArea": "700",
+        "type": "آپارتمان",
+        "numberOFrooms": "چهار",
+        "numberOFbathroom": "سه",
+        "yearOFconstraction": "1392"
+      },
+      "options": [
+        "پارکینگ",
+        "انباری",
+        "آسانسور",
+        "استخر",
+        "باربیکیو",
+        "سونا",
+        "سالن ورزش"
+      ],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "",
+        "monthlyRent": "",
+        "Buy": "8750000000"
+      }
+    },
+    {
+      "id": 15,
+      "agency": "",
+      "title": "آپارتمان شیک و زیبا",
+      "location": "تهران",
+      "date": "4 روز پیش",
+      "for": "برای اجاره",
+      "images": [
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa52.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa36.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa53.jpg",
+        "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa51.jpg"
+      ],
+      "overview": {
+        "landArea": "1200",
+        "type": "ویلا",
+        "numberOFrooms": "سه",
+        "numberOFbathroom": "یک",
+        "yearOFconstraction": "1400"
+      },
+      "options": [
+        "پارکینگ",
+        "بالکن",
+        "آسانسور",
+        "انباری",
+        "استخر",
+        "چمن",
+        "تهویه مطبوع",
+        "باربیکیو",
+        "سونا",
+        "سالن ورزش"
+      ],
+      "aboutProperty": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "price": {
+        "deposit": "700000000",
+        "monthlyRent": "25000000",
         "Buy": ""
       }
     }
+  ],
+
+  "agancies": [
+    {
+      "id": 1,
+      "nameAg": "",
+      "Address": "",
+      "activity": "",
+      "phoneNumber": "",
+      "email": "",
+      "website": "",
+      "overview": "",
+      "bgProfile": "",
+      "logoAg": ""
+    }
+  ],
+
+  "articles": [
+    {
+      "id": 1,
+      "title": "",
+      "category": "",
+      "cover": "",
+      "desc": "",
+      "release": "",
+      "numberOFcomment": "",
+      "writter": "",
+      "LinkURL": ""
+    }
+  ],
+
+  "users": [
+    {
+      "PhoneNumber": "",
+      "Email": "",
+      "FullName": "",
+      "Password": "",
+      "dateOFregestration": "",
+      "PicProfile": ""
+    }
+  ],
+
+  "categoryArticle": [
+    { "id": 1, "cateName": "تحصیلات", "cateValue": "Education" },
+    { "id": 2, "cateName": "ساختمان", "cateValue": "Building" },
+    { "id": 3, "cateName": "سرگرمی", "cateValue": "Entertainment" },
+    { "id": 4, "cateName": "مشاوره املاک", "cateValue": "RealEstate" }
   ]
 }

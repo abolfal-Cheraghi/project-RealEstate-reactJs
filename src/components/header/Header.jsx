@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./Header.css";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigation } from "react-router-dom";
 import Btn1 from "../btn1/Btn1";
 // icons
 import {
@@ -35,15 +35,32 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Header() {
+function Header() {
   const [bgColor, setBgColor] = useState("");
+  const [color, setColor] = useState("");
+  let loc = useLocation().pathname;
 
-  const listenScrollEvent = (e) => {
-    if (window.scrollY > 20) {
-      setBgColor("bg-blue-scrooler-header");
+  // useEfeect for mount nav
+  useEffect(() => {
+    // if for color nav
+    if (loc !== "/") {
+      setColor("c-black");
     } else {
+      setColor("c-white");
+    }
+  }, []);
+
+  // event handler scroll window
+  const listenScrollEvent = (e) => {
+    if (window.scrollY > 20 && loc === "/") {
+      setBgColor("bg-blue-scrooler-header");
+    } else if (window.scrollY < 20 && loc === "/") {
       setBgColor("bg-trans-scrooler-header");
-      //   setBgColor("bg-blue-scrooler-header");
+      setColor("c-white");
+    } else if (window.scrollY < 20 && loc !== "/") {
+      setBgColor("bg-trans-scrooler-header");
+    } else if (window.scrollY > 20 && loc !== "/") {
+      setBgColor("bg-white-another-page");
     }
   };
 
@@ -55,19 +72,19 @@ export default function Header() {
         <>
           <div className="container">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400  hover:text-black  ">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon
-                      className="block h-6 w-6 c-white"
+                      className={`block h-6 w-6 ${color}`}
                       aria-hidden="true"
                     />
                   ) : (
                     <Bars3Icon
-                      className="block h-6 w-6 c-white"
+                      className={`block h-6 w-6 ${color}`}
                       aria-hidden="true"
                     />
                   )}
@@ -75,15 +92,17 @@ export default function Header() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <h1 className="logo s-bold text-2xl c-white">سایت املاک</h1>
+                  <h1 className={`logo s-bold text-2xl ${color}`}>
+                    سایت املاک
+                  </h1>
                 </div>
-                <div className="hidden sm:ml-6 sm:block ms-12">
+                <div className="hidden sm:ml-6 lg:block ms-12">
                   <div className="list-menu-nav flex gap-4">
                     {navigation.map((item) => (
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        className="c-white px-3 py-2 text-sm font-medium flex gap-2 items-center"
+                        className={`${color} px-3 py-2 text-sm font-medium flex gap-2 items-center`}
                       >
                         {item.icon}
                         {item.name}
@@ -96,14 +115,22 @@ export default function Header() {
                 {/* Profile dropdown */}
                 <div className="relative flex items-center gap-5 ml-3">
                   <div className="box-panel-head flex gap-3">
-                    <div className="border-solid border-white border rounded-full p-2 transition-all duration-500 ">
+                    <div
+                      className={`border-solid ${
+                        color === "c-white" ? "border-white" : "border-black"
+                      } border rounded-full p-2 transition-all duration-500`}
+                    >
                       <NavLink to="/favorates">
-                        <FaRegHeart size="18px" className="fill-white" />
+                        <FaRegHeart size="18px" className={`${color}`} />
                       </NavLink>
                     </div>
-                    <div className="border-solid border-white border rounded-full p-2 transition-all duration-500">
+                    <div
+                      className={`border-solid ${
+                        color === "c-white" ? "border-white" : "border-black"
+                      } border rounded-full p-2 transition-all duration-500`}
+                    >
                       <NavLink to="/account-panel">
-                        <FaRegUser size="18px" className="fill-white" />
+                        <FaRegUser size="18px" className={`${color}`} />
                       </NavLink>
                     </div>
                   </div>
@@ -126,7 +153,7 @@ export default function Header() {
             leaveFrom="transform opacity-0 scale-100 "
             leaveTo="transform opacity-0 scale-95"
           >
-            <Disclosure.Panel className="sm:hidden">
+            <Disclosure.Panel className="lg:hidden">
               <div className="space-y-2 px-2 pb-3 pt-2  list-menu-phone">
                 {navigation.map((item) => (
                   <NavLink
@@ -163,3 +190,5 @@ export default function Header() {
     </Disclosure>
   );
 }
+
+export default memo(Header);

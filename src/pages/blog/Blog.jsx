@@ -7,11 +7,6 @@ export default function Blog() {
     <>
       <Header />
       <div>Blog</div>
-      <Btn1
-        LinkBtn="/add-property"
-        text="افزودن ملک"
-        className="md:my-1 md:mx-1"
-      />
     </>
   );
 }

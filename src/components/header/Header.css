@@ -17,6 +17,10 @@
   transition: all 0.3s;
   background-color: transparent;
 }
+.bg-white-another-page{
+  transition: all 0.3s;
+  background-color: var(--colorWhite);
+}
 /* link menu */
 .list-menu-nav a {
   transition: all 0.4s;
