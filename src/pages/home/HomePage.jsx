@@ -77,7 +77,7 @@ export default function HomePage() {
       {/* section hero home page */}
       <section className="hero-home-page bg-white con-fluid">
         <div className="box-hero-page">
-          <h1 className="title-hero c-white s-bold text-center">
+          <h1 className="title-hero c-white s-bold text-center w-[480px]">
             بهترین مکان برای زندگی با خانواده و عزیزان خود را پیدا کنید
           </h1>
           <div className="mt-10">
@@ -160,6 +160,7 @@ export default function HomePage() {
                     aos="fade-up"
                     key={property.id}
                     {...property}
+                    all={property}
                     img={property.images}
                     type={property.overview.type}
                     rooms={property.overview.numberOFrooms}
@@ -177,6 +178,7 @@ export default function HomePage() {
                     aos="fade-up"
                     key={property.id}
                     {...property}
+                    all={property}
                     img={property.images}
                     type={property.overview.type}
                     rooms={property.overview.numberOFrooms}
@@ -280,6 +282,7 @@ export default function HomePage() {
                     aos="fade-up"
                     gap="gap-1"
                     {...property}
+                    all={property}
                     img={property.images}
                     type={property.overview.type}
                     rooms={property.overview.numberOFrooms}

@@ -2,9 +2,9 @@ import React, { Fragment, useState } from "react";
 import "./FilterSearch.css";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import { StateProperties } from "./dataFilter";
-import { cityProperties } from "./dataFilter";
-import { optionsProperty } from "./dataFilter";
+import { StateProperties } from "../../data/dataFilter";
+import { cityProperties } from "../../data/dataFilter";
+import { optionsProperty } from "../../data/dataFilter";
 
 export default function FilterSearch() {
   const [selectedState, setSelectedState] = useState(StateProperties[0]);
@@ -12,7 +12,7 @@ export default function FilterSearch() {
 
   return (
     <form
-      action=""
+      action="/properties"
       className="w-full flex flex-col items-center justify-center"
     >
       <div className="flex gap-7">
@@ -20,7 +20,7 @@ export default function FilterSearch() {
           <input
             id="default-radio-1"
             type="radio"
-            value=""
+            value="آپارتمان"
             name="default-radio"
             class="w-4 h-4x"
           />

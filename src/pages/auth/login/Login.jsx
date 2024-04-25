@@ -54,7 +54,6 @@ export default function Login() {
         console.log(user.data.length);
         for (let index = 0; index < user.data.length; index++) {
           if (user.data[index].PhoneNumber === phoneNumber) {
-            console.log("همین درسته");
             setLevel(2);
           } else {
             Swal.fire({
@@ -90,9 +89,9 @@ export default function Login() {
 
   // change adler inputs
   const changeInputsPE = (e) => {
-    if (e.target.name === "email") {
+    if (e.target.name === "Email") {
       setEmail(e.target.value);
-    } else if (e.target.name === "phone") {
+    } else if (e.target.name === "PhoneNumber") {
       setPhoneNumber(e.target.value);
     }
   };
@@ -244,7 +243,7 @@ export default function Login() {
               <div className="con-form bg-white shadow-lg rounded-xl p-5 md:p-8 text-center">
                 <div className="flex flex-col gap-4">
                   <h4 className="text-[28px] c-black s-medium text-right">
-                    کد ورود
+                    گذرواژه
                   </h4>
                   <InputPass
                     onChange={(e) => {

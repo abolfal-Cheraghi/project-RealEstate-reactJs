@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CartProperty.css";
 import { Link } from "react-router-dom";
 // icons
@@ -16,21 +16,39 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 import { space } from "postcss/lib/list";
+import { useDglobal } from "../../hooks/useDglobal";
+import { useAddPr } from "../../hooks/useAddAd";
+import { useDeletePr } from "../../hooks/useDeleteAd";
 
 export default function CartProperty(props) {
-  const [isSave, setIsSave] = useState(false);
+  const [isSave, setIsSave] = useState();
+  const { listFavorate, dispatch } = useDglobal();
+  const { addPr } = useAddPr();
+  const { deletePr } = useDeletePr();
 
   // btn save property handler
   const saveHandler = () => {
-    if (isSave) {
-      setIsSave(false);
-    } else {
-      setIsSave(true);
-    }
+    addPr(props.allData);
+  };
+  const removerSaveHandler = () => {
+    deletePr(props.id);
   };
 
+  useEffect(() => {
+    // Let's see the situation, we bet if this data is in favorites
+    setIsSave(() => {
+      listFavorate.forEach((item) => {
+        if (props.id === item.id) return false;
+        return true;
+      });
+    });
+  }, [listFavorate]);
+
   return (
-    <div className={`con-cart-property w-full rounded-xl overflow-hidden  ${props.border}`}  data-aos={props.aos}>
+    <div
+      className={`con-cart-property w-full rounded-xl overflow-hidden  ${props.border}`}
+      data-aos={props.aos}
+    >
       <div className="header-cart-property h-[260px]  relative bg-blue">
         {/* slider pictures */}
         <Swiper
@@ -88,7 +106,11 @@ export default function CartProperty(props) {
                 className="box-save-cart  px-2 py-1 rounded-lg"
                 onClick={saveHandler}
               >
-                <IoMdHeartEmpty size="20px" className="icon-save fill-white" />
+                <IoMdHeartEmpty
+                  size="20px"
+                  className="icon-save fill-white"
+                  onClick={removerSaveHandler}
+                />
               </div>
             )}
           </div>
@@ -98,8 +120,8 @@ export default function CartProperty(props) {
       {/* content bottom cart */}
       <div className="content-cart-property bg-white p-5">
         <div className="flex flex-col gap-5">
-          <h3 className="c-black text-xl s-medium">
-            <Link>{props.title}</Link>
+          <h3 className="c-black text-xl s-medium line-clamp-1">
+            <Link to={`/property/${props.id}`}>{props.title}</Link>
           </h3>
 
           <div className="flex items-center gap-2">
@@ -142,5 +164,5 @@ export default function CartProperty(props) {
 
 CartProperty.defaultProps = {
   gap: "gap-1",
-  border : "border border-solid border"
+  border: "border border-solid border",
 };

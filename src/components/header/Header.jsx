@@ -120,7 +120,7 @@ function Header() {
                         color === "c-white" ? "border-white" : "border-black"
                       } border rounded-full p-2 transition-all duration-500`}
                     >
-                      <NavLink to="/favorates">
+                      <NavLink to="/account/favorates">
                         <FaRegHeart size="18px" className={`${color}`} />
                       </NavLink>
                     </div>
@@ -129,13 +129,13 @@ function Header() {
                         color === "c-white" ? "border-white" : "border-black"
                       } border rounded-full p-2 transition-all duration-500`}
                     >
-                      <NavLink to="/account-panel">
+                      <NavLink to="/account">
                         <FaRegUser size="18px" className={`${color}`} />
                       </NavLink>
                     </div>
                   </div>
                   <Btn1
-                    LinkBtn={"/add-property"}
+                    linkBtn="/account/add-property"
                     text="افزودن ملک"
                     className="md:my-1 md:mx-1"
                   />
@@ -168,7 +168,7 @@ function Header() {
                 ))}
                 <div className="box-panel-head-phone">
                   <NavLink
-                    to="/account-panel"
+                    to="/account"
                     className="c-gray-2 block px-3 py-2 text-base font-medium flex gap-2 items-center "
                   >
                     <FaUser size="16px" />

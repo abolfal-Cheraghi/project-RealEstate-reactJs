@@ -11,3 +11,12 @@ export function findNameArea(valuearea) {
     return "اصفهان";
   }
 }
+
+export function foundedPathLocation(str, arr, setState) {
+  arr.forEach((item) => {
+    if (item.path === str) {
+      setState(item.value);
+      return;
+    }
+  });
+}

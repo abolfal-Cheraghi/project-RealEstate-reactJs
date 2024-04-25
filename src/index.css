@@ -1,13 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* edit utilities */
+@layer utilities {
+  .hover-icon:hover svg {
+    fill: white;
+  }
+}
+
+@layer components {
+  /* box address | page contact */
+  .box-address {
+    @apply bg-blueBG h-64 px-8 text-white rounded-lg flex flex-col gap-5 items-center justify-center relative duration-300;
+  }
+  .box-address::before {
+    content: "";
+    @apply h-full w-full bg-myGreen-300 rounded-lg absolute z-[-1] -translate-x-2 -translate-y-2 duration-300;
+  }
+  .box-address::after {
+    content: "";
+    @apply h-full w-full border border-myGreen-300 rounded-lg absolute z-[-1] translate-x-2 translate-y-2 duration-300;
+  }
+  .box-address:hover::before {
+    @apply translate-x-2 translate-y-2;
+  }
+  .box-address:hover::after {
+    @apply -translate-x-2 -translate-y-2;
+  }
+
+  /* field input conatact */
+  .field-input-conatact {
+    @apply rounded-lg h-10 px-2 text-xs text-gray1 border;
+  }
+  .field-input-conatact:focus {
+    outline: none;
+    @apply border border-[#acacac];
+  }
+  .label-input-contact {
+    @apply text-gray1 text-[13px];
+  }
+}
+
 /* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+textarea {
+  @apply w-full px-2 py-2 text-sm rounded-lg h-20 text-gray1 border;
+}
+textarea:focus {
+  outline: none;
+  @apply border border-[#acacac];
+}
+@media screen {
+}
 /* radio box */
 input[type="radio"] {
   /* accent-color: var(--colorGreen1);
@@ -15,8 +64,8 @@ input[type="radio"] {
   height: 20px; */
   -webkit-appearance: none;
   background-color: var(--colorWhite);
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   outline: none;
   border: 2px solid var(--colorGreen3);
@@ -40,14 +89,14 @@ input[type="radio"]:checked {
 }
 
 /*  input numbers */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-input[type=number] {
-    -moz-appearance:textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 /* check box */
 input[type="checkbox"] {
@@ -86,7 +135,6 @@ input[type="checkbox"]:checked {
 }
 .inputs-auth:focus {
   outline: 1px solid var(--colorGreen3) !important;
- 
 }
 /* body */
 body {
@@ -258,8 +306,8 @@ h1 {
 }
 
 /* cursor */
-.pointer{
-    cursor: pointer;
+.pointer {
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   /* font size mobile */

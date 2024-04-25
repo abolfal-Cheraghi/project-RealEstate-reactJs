@@ -15,18 +15,24 @@ export default {
         myWhite: "#ffffff",
         black: "#212121",
         blue: "#082039",
+        blueBG: "#0E2E50" ,
         gray1: "#70778b",
-        gray2: "lightgray",
+        gray2: "#F5F5F5",
         gray3: "#a2a2a2",
       },
+
       container: {
         padding: {
-          DEFAULT: "1rem",
-          sm: "0rem",
-          lg: "2rem",
-          xl: "4rem",
-          "2xl": "0rem",
+          DEFAULT: "1.5rem",
         },
+      },
+
+      spacing: {},
+
+      fontSize: {
+        fs10x: "0.625rem",
+        fs18x: "1.125rem",
+        fs22x: "1.375rem",
       },
     },
   },

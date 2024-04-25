@@ -11,7 +11,7 @@ import CartProperty from "../../components/cartProperty/CartProperty";
 // aos
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { findNameArea } from "../../assets/functions/findNameArea";
+import { findNameArea } from "../../functions/findNameArea";
 
 // icons
 import { IoGrid } from "react-icons/io5";
@@ -20,6 +20,10 @@ import CartProperty2 from "../../components/cartProperty2/CartProperty2";
 import Footer from "../../components/footer/Footer";
 import NotFound from "../../components/not-found/NotFound";
 import BoxNewProperties from "../../components/boxNewProperties/BoxNewProperties";
+// img
+import ReactPaginate from "react-paginate";
+import BoxFilterPr from "../../components/boxFilterPr/BoxFilterPr";
+import BoxBanner1 from "../../components/boxBanner1/BoxBanner1";
 
 export default function Properties() {
   // locatios and query URL
@@ -39,7 +43,7 @@ export default function Properties() {
 
   // animation aos
   useEffect(() => {
-    Aos.init()
+    Aos.init();
   }, []);
 
   useEffect(() => {
@@ -154,30 +158,30 @@ export default function Properties() {
 
         {/* section properties and filters */}
         <section className="properties mt-10">
-          <div className="flex gap-10 flex-wrap lg:flex-nowrap">
-            <div className="w-full md:w-3/4">
+          <div className="flex gap-8 flex-wrap lg:flex-nowrap">
+            <div className="w-full lg:w-9/12">
               <div className="top-box flex items-center justify-between mb-5">
-                {
-                  dataProperties.length !== 0 &&<div className="hidden md:flex items-center bg-white rounded-lg px-4 py-2 shadow-lg gap-4">
-                  <button
-                    type="button"
-                    className="border-l border-l-solid pe-3"
-                  >
-                    <IoGrid
-                      size="20px"
-                      className="fill-gray3"
-                      onClick={() => setTypeShow("grid")}
-                    />
-                  </button>
-                  <button
-                    type="button"
-                    className=""
-                    onClick={() => setTypeShow("list")}
-                  >
-                    <FaThList size="20px" className="fill-gray3" />
-                  </button>
-                </div>
-                }
+                {dataProperties.length !== 0 && (
+                  <div className="hidden md:flex items-center bg-white rounded-lg px-4 py-2 shadow-lg gap-4">
+                    <button
+                      type="button"
+                      className="border-l border-l-solid pe-3"
+                    >
+                      <IoGrid
+                        size="20px"
+                        className="fill-gray3"
+                        onClick={() => setTypeShow("grid")}
+                      />
+                    </button>
+                    <button
+                      type="button"
+                      className=""
+                      onClick={() => setTypeShow("list")}
+                    >
+                      <FaThList size="20px" className="fill-gray3" />
+                    </button>
+                  </div>
+                )}
               </div>
               {/* if length property object === 0 */}
               {dataProperties.length === 0 ? (
@@ -187,8 +191,8 @@ export default function Properties() {
                 // section show properties
                 <div
                   className={`grid grid-cols-1 ${
-                    typeShow === "grid" ? "lg:grid-cols-2" : "lg:grid-cols-1"
-                  } gap-6`}
+                    typeShow === "grid" ? "md:grid-cols-2" : "lg:grid-cols-1"
+                  } gap-6 `}
                 >
                   {dataProperties.map((property) =>
                     typeShow === "grid" ? (
@@ -196,6 +200,7 @@ export default function Properties() {
                         aos="fade-up"
                         key={property.id}
                         {...property}
+                        all={property}
                         img={property.images}
                         type={property.overview.type}
                         rooms={property.overview.numberOFrooms}
@@ -212,6 +217,7 @@ export default function Properties() {
                         aos="fade-up"
                         key={property.id}
                         {...property}
+                        all={property}
                         img={property.images}
                         type={property.overview.type}
                         rooms={property.overview.numberOFrooms}
@@ -227,9 +233,17 @@ export default function Properties() {
                   )}
                 </div>
               )}
+              <div className="w-full flex items-center">
+                {/* <ReactPaginate /> */}
+              </div>
             </div>
-            <div className="w-full md:w-1/4">
-              <BoxNewProperties/>
+            <div className="w-full lg:w-3/12">
+              {/* box search and filter on properties */}
+              <BoxFilterPr />
+              {/* box news property */}
+              <BoxNewProperties />
+              {/* box find property for you */}
+              <BoxBanner1 />
             </div>
           </div>
         </section>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // icons
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -7,7 +7,12 @@ import { MdEmail } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
+
+
 export default function CartAganc(props) {
+
+
+
   return (
     <div className="con-cart-aganc rounded-xl bg-white p-4">
       <div className="header-cart-agance h-[150px] overflow-hidden">
@@ -18,7 +23,7 @@ export default function CartAganc(props) {
         />
       </div>
       <div className="content-cart-aganc flex flex-col gap-1 items-center">
-        <Link to={""}>
+        <Link to={`/agency-profile/${props.id}`}>
           <h4 className="text-lg text-center s-bold hover:c-green2">
             {props.nameAg}
           </h4>

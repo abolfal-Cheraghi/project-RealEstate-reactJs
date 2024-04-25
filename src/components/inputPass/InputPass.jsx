@@ -13,7 +13,6 @@ export default function InputPass(props) {
           className="inputs-auth bg-[#F8F8F8] w-full h-12 rounded-xl px-4 "
           placeholder="رمز عبور"
           onChange={props.onChange}
-          maxLength={4}
         />
         <button
           type="button"

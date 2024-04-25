@@ -10,6 +10,13 @@ import Login from "./pages/auth/login/Login";
 import Regester from "./pages/auth/regester/Regester";
 import ForgetPassword from "./pages/auth/forget-password/ForgetPassword";
 import PrivateRoute from "./components/PrivateRoute";
+import Property from "./pages/property/Property.jsx";
+import Agancy from "./pages/agencies/agancy/Agancy.jsx";
+import { Children } from "react";
+import AddProperty from "./pages/account/add-Property/AddProperty.jsx";
+import EditProperty from "./pages/account/edit-property/EditProperty.jsx";
+import UpgradeToAgent from "./pages/account/upgrade-to-agent/UpgradeToAgent.jsx";
+import ListSubmitedPr from "./pages/account/list-of-submited-pr/ListSubmitedPr.jsx";
 
 export let routes = [
   { path: "/", element: <HomePage /> },
@@ -17,23 +24,39 @@ export let routes = [
   { path: "/contact-us", element: <Contact /> },
   { path: "/blog", element: <Blog /> },
   {
-    path: "/account-panel",
-    element: (
-      <PrivateRoute>
-        <Account />
-      </PrivateRoute>
-    ),
-  },
-  {
-    path: "/favorates",
-    element: (
-      <PrivateRoute>
-        <Favorate />
-      </PrivateRoute>
-    ),
+    path: "/account",
+    element: <Account />,
+    children: [
+      {
+        path: "add-property",
+        element: <AddProperty />,
+      },
+      {
+        path: "edit-property",
+        element: <EditProperty />,
+      },
+      {
+        path: "list-of-submited-properties",
+        element: <ListSubmitedPr />,
+      },
+      {
+        path: "favorates",
+        element: <Favorate />,
+      },
+      {
+        path: "upgrade-to-agent",
+        element: <UpgradeToAgent />,
+      },
+      {
+        path: "edit-account-info",
+        element: <UpgradeToAgent />,
+      },
+    ],
   },
   { path: "/agencies", element: <Agencies /> },
+  { path: "/agency-profile/:idAgency", element: <Agancy /> },
   { path: "/properties/*", element: <Properties /> },
+  { path: "/property/:propetyId", element: <Property /> },
   { path: "/regester", element: <Regester /> },
   { path: "/login", element: <Login /> },
   { path: "/forget-password", element: <ForgetPassword /> },

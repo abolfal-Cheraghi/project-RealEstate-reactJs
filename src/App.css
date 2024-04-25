@@ -24,3 +24,67 @@
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
+/* progress bar */
+progress {
+  border-radius: 20px !important;
+  width: 80%;
+  height: 15px;
+  margin-left: -11.5%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+progress:before {
+  content: attr(data-label);
+  font-size: 0.8em;
+  vertical-align: 0;
+  position: absolute;
+  padding-right: 10px;
+  color: #ffffff;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eaf7f4;
+
+  border-radius: 20px;
+}
+progress::-webkit-progress-value {
+  @apply bg-myGreen-400;
+  border-radius: 20px !important;
+}
+
+/* cart agance 3 */
+.img-cart-aganc3 {
+  transition: all 0.5s !important;
+}
+.cart-agancy-3 {
+  transition: all 0.5s !important;
+}
+.cart-agancy-3:hover .img-cart-aganc3 {
+  right: 0;
+  transition: all 0.5s !important;
+}
+
+/* page contact */
+.filter-gray:hover {
+  filter: grayscale(0.29);
+}
+.link-menu-sidebar:hover svg{
+  fill: #ffffff !important
+}
+
+/* page account */
+.item-list-sidebar .active {
+  @apply bg-myGreen-300;
+  transition: all 0.5s;
+  color: #fff !important;
+  fill: #fff !important;
+}
+.item-list-sidebar .active svg{
+  @apply fill-white
+}
+/* icon box component */
+.my-icon-box:hover .my-icon {
+  @apply bg-myGreen-300 fill-white;
+}
+.my-icon-box:hover .my-icon svg {
+  @apply fill-white;
+}

@@ -32,7 +32,7 @@ export default function CartProperty2(props) {
       className={`con-cart-property bg-white w-full rounded-xl overflow-hidden  ${props.border} flex`}
       data-aos={props.aos}
     >
-      <div className="header-cart-property w-1/3 h-[260px] relative p-3 rounded-lg">
+      <div className="header-cart-property w-1/3 h-[240px] relative p-3 rounded-lg">
         {/* slider pictures */}
         <Swiper
           loop={true}
@@ -71,15 +71,15 @@ export default function CartProperty2(props) {
       </div>
 
       {/* content  cart */}
-      <div className="content-cart-property relative p-5 w-2/3">
+      <div className="content-cart-property relative p-3 w-2/3">
         {/* label absulote */}
         <div className="z-10 type-cart-propert bg-green-1 w-fit px-2 py-1 c-white rounded-md absolute top-5 left-5 text-sm">
           {props.for}
         </div>
         <div className="flex flex-col gap-3.5">
           <div className="c-green-1 w-fit text-sm">{props.type}</div>
-          <h3 className="c-black text-xl s-medium">
-            <Link>{props.title}</Link>
+          <h3 className="c-black text-xl s-medium line-clamp-1">
+            <Link to={`/property/${props.id}`}>{props.title}</Link>
           </h3>
 
           <div className="flex items-center gap-2">

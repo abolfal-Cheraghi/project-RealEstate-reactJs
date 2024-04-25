@@ -18,8 +18,8 @@ export default function Regester() {
   const [level, setLevel] = useState(1);
   const [dataForm, setDataForm] = useState({});
   const [dataUser, setDataUser] = useState({
-    PhoneNumber: "dsfsd",
-    Email: "dsfsd",
+    PhoneNumber: "",
+    Email: "",
     FullName: "",
     Password: "",
     dateOFregestration: "",
