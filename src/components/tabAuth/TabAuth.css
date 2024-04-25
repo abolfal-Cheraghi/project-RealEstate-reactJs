@@ -1,0 +1,22 @@
+.input-phone-number{
+    outline: none !important;
+}
+
+#active-tab-item{
+  
+    opacity: 1 !important;
+    position: relative;
+    transition: all 0.3s;
+
+}
+#active-tab-item::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--colorGreen1);
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    transition: all 0.3s;
+}

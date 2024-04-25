@@ -85,7 +85,7 @@ export default function FilterSearch() {
                       className={({ active }) =>
                         `relative cursor-default select-none py-2 pl-10 pr-4 ${
                           active
-                            ? "bg-green-100 text-green-900"
+                            ? "bg-myGreen-100 text-green-900"
                             : "text-gray-900"
                         }`
                       }
@@ -146,7 +146,7 @@ export default function FilterSearch() {
                       key={state.id}
                       className={({ active }) =>
                         `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                          active ? "bg-green1 text-green" : "text-gray-900"
+                          active ? "bg-myGreen-100 text-green" : "text-gray-900"
                         }`
                       }
                       value={state}

@@ -67,7 +67,7 @@ function Header() {
   window.addEventListener("scroll", listenScrollEvent);
 
   return (
-    <Disclosure as="nav" className={`${bgColor} header`}>
+    <Disclosure as="nav" className={`${bgColor} header z-50`}>
       {({ open }) => (
         <>
           <div className="container">

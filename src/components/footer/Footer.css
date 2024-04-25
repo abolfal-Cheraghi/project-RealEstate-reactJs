@@ -1,0 +1,10 @@
+/* title footer */
+.title-footer h4::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  height: 3px;
+  width: 20%;
+  background-color: var(--colorGreen3);
+}

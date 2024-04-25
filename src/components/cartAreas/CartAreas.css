@@ -1,0 +1,10 @@
+.con-cart-areas:hover {
+  transform: translateY(-5px);
+}
+.con-cart-areas:hover .icon-cart-areas {
+  background-color: var(--colorGreen2) !important
+  ;
+}
+.con-cart-areas:hover .icon-cart-areas svg {
+  fill: #ffff;
+}
