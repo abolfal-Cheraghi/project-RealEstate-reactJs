@@ -15,6 +15,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 // use navigate from react router dom
 import { useNavigate } from "react-router-dom";
+import { useDglobal } from "../../../hooks/useDglobal";
 export default function Login() {
   let navigate = useNavigate();
   const [level, setLevel] = useState(1);
@@ -24,6 +25,8 @@ export default function Login() {
   const [countTimer, setCountTimer] = useState(30);
   // state tab active in component auth
   const [tabActive, setTabActive] = useState(true);
+  // context
+  const { dataUser, setDataUser } = useDglobal();
 
   // useEfect on Change level
   useEffect(() => {
@@ -68,8 +71,6 @@ export default function Login() {
       });
     } else if (tabActive === false) {
       axios.get("http://localhost:5000/users").then((user) => {
-        console.log(user.data[0].Email);
-        console.log(user.data.length);
         for (let index = 0; index < user.data.length; index++) {
           if (user.data[index].Email === email) {
             setLevel(3);
@@ -87,7 +88,7 @@ export default function Login() {
     }
   };
 
-  // change adler inputs
+  // change handler inputs
   const changeInputsPE = (e) => {
     if (e.target.name === "Email") {
       setEmail(e.target.value);
@@ -120,6 +121,7 @@ export default function Login() {
       .get(`http://localhost:5000/users/?Email=${email}`)
       .then((authUser) => {
         if (authUser.data[0].Password === pass) {
+          setDataUser(authUser.data[0]);
           document.cookie =
             "username=not ; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
           navigate("/");
@@ -143,7 +145,9 @@ export default function Login() {
       });
   };
 
-  const loginWithPhone = () => {};
+  const loginWithPhone = () => {
+    
+  };
   return (
     <>
       {/* section login */}

@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 // icons
@@ -7,9 +7,17 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-function Footer() {
+
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { MdEmail, MdLocationOn } from "react-icons/md";
+
+import { useDglobal } from "../../hooks/useDglobal";
+import lisence from "../../../public/images/lisence.png";
+export default function Footer() {
+  const { fastLinks, addressFooter } = useDglobal();
+
   return (
-    <footer className="con-fluid h-[450px] bg-[url('../../../public/images/bg-footer.jpg')] bg-no-repeat bg-cover c-white relative ">
+    <footer className="con-fluid  lg:h-[450px] bg-[url('../../../public/images/bg-footer.jpg')] bg-no-repeat bg-cover c-white relative ">
       <div className="at-top-footer absolute left-0 right-0 h-full flex items-center">
         <div className="container flex flex-wrap lg:flex-nowrap gap-14 items-center">
           {/* section about and link social media */}
@@ -57,6 +65,14 @@ function Footer() {
                 لینک های سریع
               </h4>
             </div>
+            {/* list fast links */}
+            <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-4">
+              {fastLinks.map((item) => (
+                <li className="text-sm duration-300 hover:-translate-x-2">
+                  <Link to={`/${item.link}`}>{item.value}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* section address us */}
@@ -64,12 +80,35 @@ function Footer() {
             <div className="title-footer">
               <h4 className="s-bold text-lg md:text-xl relative">تماس با ما</h4>
             </div>
+            {/* list our address */}
+            <ul className="mt-4 grid grid-cols-1 gap-8">
+              <li className="flex items-center gap-1 text-sm duration-300 hover:-translate-x-2">
+                <BiSolidPhoneCall size="18px" className="fill-gray3" />
+                23456789 - 021
+              </li>
+              <li className="flex items-center gap-1 text-sm duration-300 hover:-translate-x-2">
+                <MdEmail size="18px" className="fill-gray3" />
+                amlaki@gmail.com
+              </li>
+              <li className="flex items-center gap-2 text-sm duration-300 hover:-translate-x-2">
+                <MdLocationOn size="29px" className="fill-gray3" />
+                <span className="leading-8">
+                  خیابان ولیعصر - کوچه طراحان سایت - پلاک 1 - واحد 2
+                </span>
+              </li>
+            </ul>
           </div>
 
           {/* section namad */}
           <div className="w-1/2 md:w-بع lg:w-1/4 flex flex-col gap-2 md:gap-6">
             <div className="title-footer">
               <h4 className="s-bold text-lg md:text-xl relative">مجوز ها</h4>
+            </div>
+            <div className="mt-4 w-[150px] grid grid-cols-2 gap-3 ">
+              <img src={lisence} alt="lisence" className=""/>
+              <img src={lisence} alt="lisence" className=""/>
+              <img src={lisence} alt="lisence" className=""/>
+              <img src={lisence} alt="lisence" className=""/>
             </div>
           </div>
         </div>
@@ -85,4 +124,3 @@ function Footer() {
     </footer>
   );
 }
-export default memo(Footer);

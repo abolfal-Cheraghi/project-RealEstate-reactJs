@@ -121,7 +121,7 @@ export default function FilterSearch() {
         </div>
         {/* 2 city property */}
         <div className="con-select-box w-44">
-          <Listbox value={selectedState} onChange={setSelectedCity}>
+          <Listbox value={selectedCity} onChange={setSelectedCity}>
             <div className="relative">
               <Listbox.Button className=" button-select-option relative w-full h-12 cursor-default  bg-white py-2 pl-3 pr-10 text-left shadow-lg focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
                 <span className="text-gray-500 block truncate absolute inset-y-0 right-0 flex items-center pr-2">

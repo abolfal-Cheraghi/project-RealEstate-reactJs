@@ -16,6 +16,7 @@ import {
   FaWhatsapp,
   FaTelegram,
   FaXTwitter,
+  FaPhoneFlip,
 } from "react-icons/fa6";
 import { PiBathtubFill } from "react-icons/pi";
 import { SlSizeFullscreen } from "react-icons/sl";
@@ -33,15 +34,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import required modules swiper
 import { Pagination } from "swiper/modules";
+import { useDglobal } from "../../hooks/useDglobal";
+import { IsLogin } from "../../utils";
+import Swal from "sweetalert2";
+
+// hook global context
 
 export default function Property() {
   const params = useParams().propetyId;
   const [dataProperty, setDataProperty] = useState({});
+  const [dataAgancy, setDataAgancy] = useState({});
   const [overview, setOverview] = useState({});
   const [options, setOptions] = useState([]);
   const [images, setImages] = useState([]);
   const [isPending, setIsPending] = useState(true);
-  const [isSave, setIsSave] = useState(false);
+  const [isSave, setIsSave] = useState();
+  const { AddPr, removePr, isSavePr, listFavorate } = useDglobal();
   // modal share and slider img
   let [isOpenShare, setIsOpenShare] = useState(false);
   let [isOpenSlider, setIsOpenSlider] = useState(false);
@@ -55,18 +63,20 @@ export default function Property() {
       setOptions(res.data["options"]);
       setImages(res.data["images"]);
       setIsPending(false);
-      console.log(dataProperty);
+      setIsSave(isSavePr(res.data.id));
     });
+
+    // get address agency this property
+    axios
+      .get(`http://localhost:5000/agancies/${dataProperty.agency}`)
+      .then((res) => {
+        setDataAgancy(res.data);
+      });
   }, [params]);
 
-  //   validate isSave
-  const saveHandler = () => {
-    if (isSave) {
-      setIsSave(false);
-    } else {
-      setIsSave(true);
-    }
-  };
+  useEffect(() => {
+    IsLogin() && setIsSave(isSavePr(dataProperty.id));
+  }, [listFavorate]);
 
   // functions modal
   const closeModalShare = () => {
@@ -195,7 +205,18 @@ export default function Property() {
                     {isSave ? (
                       <div
                         className="h-full w-full p-2.5 pointer"
-                        onClick={saveHandler}
+                        onClick={() => {
+                          IsLogin()
+                            ? removePr(dataProperty["id"])
+                            : Swal.fire({
+                                position: "top-end",
+                                icon: "warning",
+                                title: "وارد شوید !",
+                                text: "قبل از اضافه کردن به علاقه مندی وارد شوید .",
+                                showConfirmButton: false,
+                                timer: 1500,
+                              });
+                        }}
                       >
                         <IoMdHeart
                           size="23px"
@@ -205,7 +226,18 @@ export default function Property() {
                     ) : (
                       <div
                         className="h-full w-full p-2.5  duration-300 pointer hover:bg-myGreen-300 hover-icon "
-                        onClick={saveHandler}
+                        onClick={() => {
+                          IsLogin()
+                            ? AddPr(dataProperty)
+                            : Swal.fire({
+                                position: "top-end",
+                                icon: "warning",
+                                title: "وارد شوید !",
+                                text: "قبل از اضافه کردن به علاقه مندی وارد شوید .",
+                                showConfirmButton: false,
+                                timer: 1500,
+                              });
+                        }}
                       >
                         <IoMdHeartEmpty
                           size="23px"
@@ -386,6 +418,46 @@ export default function Property() {
             </div>
             {/* left box */}
             <div className="">
+              {/* box Advertiser information ...*/}
+              <div className="box-advertiser-info">
+                <div className="bg-white rounded-lg p-6">
+                  {dataAgancy.agency === "" ? (
+                    <span>این اگهی را عموم ثبت کردن .</span>
+                  ) : (
+                    <>
+                      <h4 className="text-black s-bold text-lg">
+                        اطلاعات آژانس املاک
+                      </h4>
+                      <hr className="my-3" />
+                      <div className="grid grid-cols-3 items-center gap-4">
+                        <div className="img">
+                          <img
+                            src={dataAgancy.logoAg}
+                            alt="logo agency"
+                            className="rounded-[100%] border border-2 py-2 h-24"
+                          />
+                        </div>
+                        <div className="col-span-2 flex flex-col gap-3">
+                          <span className="text-black s-medium text-base">
+                            {dataAgancy.nameAg}
+                          </span>
+                          <div className="flex gap-1 items-center">
+                            <FaPhoneFlip className="fill-gray1" size="12px" />
+                            <span className="text-gray1">
+                              {dataAgancy.phoneNumber}
+                            </span>
+                          </div>
+                          <Link to={`/agency-profile/${dataAgancy.id}`}>
+                            <button className="bg-myGreen-300 w-fit py-1 px-3 text-xs text-white rounded-lg">
+                              مشاهده پروفایل
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
               {/* box the newest propeties */}
               <BoxNewProperties />
               {/* box banner 1 */}

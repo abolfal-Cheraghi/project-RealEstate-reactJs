@@ -19,6 +19,7 @@ function BoxNewProperties() {
         {dataNewProperties.map((property, index) => (
           <>
             <CartPropertiy3
+              key={property.id}
               {...property}
               cover={property.images[0]}
               price={

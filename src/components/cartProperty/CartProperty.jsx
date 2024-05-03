@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./CartProperty.css";
 import { Link } from "react-router-dom";
 // icons
@@ -15,35 +15,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
-import { space } from "postcss/lib/list";
+
 import { useDglobal } from "../../hooks/useDglobal";
-import { useAddPr } from "../../hooks/useAddAd";
-import { useDeletePr } from "../../hooks/useDeleteAd";
+import { IsLogin } from "../../utils";
+import Swal from "sweetalert2";
 
 export default function CartProperty(props) {
   const [isSave, setIsSave] = useState();
-  const { listFavorate, dispatch } = useDglobal();
-  const { addPr } = useAddPr();
-  const { deletePr } = useDeletePr();
-
-  // btn save property handler
-  const saveHandler = () => {
-    addPr(props.allData);
-  };
-  const removerSaveHandler = () => {
-    deletePr(props.id);
-  };
-
+  const { AddPr, removePr, listFavorate, isSavePr } = useDglobal();
   useEffect(() => {
-    // Let's see the situation, we bet if this data is in favorites
-    setIsSave(() => {
-      listFavorate.forEach((item) => {
-        if (props.id === item.id) return false;
-        return true;
-      });
-    });
+    if (IsLogin) {
+      setIsSave(isSavePr(props.id));
+    } else {
+      return;
+    }
   }, [listFavorate]);
-
   return (
     <div
       className={`con-cart-property w-full rounded-xl overflow-hidden  ${props.border}`}
@@ -97,20 +83,37 @@ export default function CartProperty(props) {
             {isSave ? (
               <div
                 className="box-save-cart  px-2 py-1 rounded-lg"
-                onClick={saveHandler}
+                onClick={() => {
+                  IsLogin()
+                    ? removePr(props.id)
+                    : Swal.fire({
+                        position: "top-end",
+                        icon: "warning",
+                        text: "قبل از اضافه کردن به علاقه مندی وارد شوید",
+                        showConfirmButton: false,
+                        timer: 1500,
+                      });
+                }}
               >
                 <IoMdHeart size="20px" className="icon-save fill-green-1" />
               </div>
             ) : (
               <div
                 className="box-save-cart  px-2 py-1 rounded-lg"
-                onClick={saveHandler}
+                onClick={() => {
+                  IsLogin()
+                    ? AddPr(props.all)
+                    : Swal.fire({
+                        position: "top-end",
+                        icon: "warning",
+                        title: "وارد شوید !",
+                        text: "قبل از اضافه کردن به علاقه مندی وارد شوید .",
+                        showConfirmButton: false,
+                        timer: 111500,
+                      });
+                }}
               >
-                <IoMdHeartEmpty
-                  size="20px"
-                  className="icon-save fill-white"
-                  onClick={removerSaveHandler}
-                />
+                <IoMdHeartEmpty size="20px" className="icon-save fill-white" />
               </div>
             )}
           </div>

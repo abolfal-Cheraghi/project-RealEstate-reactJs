@@ -25,7 +25,11 @@ export let routes = [
   { path: "/blog", element: <Blog /> },
   {
     path: "/account",
-    element: <Account />,
+    element: (
+      <PrivateRoute>
+        <Account />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "add-property",

@@ -16,17 +16,6 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { space } from "postcss/lib/list";
 export default function CartProperty2(props) {
-  const [isSave, setIsSave] = useState(false);
-
-  // btn save property handler
-  const saveHandler = () => {
-    if (isSave) {
-      setIsSave(false);
-    } else {
-      setIsSave(true);
-    }
-  };
-
   return (
     <div
       className={`con-cart-property bg-white w-full rounded-xl overflow-hidden  ${props.border} flex`}
@@ -50,23 +39,6 @@ export default function CartProperty2(props) {
         {/* info bottom header */}
         <div className="info-box-cart-property  absolute bottom-7 left-7 right-4 flex justify-between items-center z-10">
           <div className="left flex flex-col"></div>
-          <div className="right ">
-            {isSave ? (
-              <div
-                className="box-save-cart  px-2 py-1 rounded-lg"
-                onClick={saveHandler}
-              >
-                <IoMdHeart size="20px" className="icon-save fill-green-1" />
-              </div>
-            ) : (
-              <div
-                className="box-save-cart  px-2 py-1 rounded-lg"
-                onClick={saveHandler}
-              >
-                <IoMdHeartEmpty size="20px" className="icon-save fill-white" />
-              </div>
-            )}
-          </div>
         </div>
       </div>
 

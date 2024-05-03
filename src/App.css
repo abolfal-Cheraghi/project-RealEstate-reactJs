@@ -67,8 +67,8 @@ progress::-webkit-progress-value {
 .filter-gray:hover {
   filter: grayscale(0.29);
 }
-.link-menu-sidebar:hover svg{
-  fill: #ffffff !important
+.link-menu-sidebar:hover svg {
+  fill: #ffffff !important;
 }
 
 /* page account */
@@ -78,8 +78,8 @@ progress::-webkit-progress-value {
   color: #fff !important;
   fill: #fff !important;
 }
-.item-list-sidebar .active svg{
-  @apply fill-white
+.item-list-sidebar .active svg {
+  @apply fill-white;
 }
 /* icon box component */
 .my-icon-box:hover .my-icon {
@@ -87,4 +87,9 @@ progress::-webkit-progress-value {
 }
 .my-icon-box:hover .my-icon svg {
   @apply fill-white;
+}
+/* sweetalert */
+.swal2-html-container {
+  margin: 0 !important;
+  height: min-content;
 }

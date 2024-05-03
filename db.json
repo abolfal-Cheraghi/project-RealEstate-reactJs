@@ -1,7 +1,7 @@
 {
   "properties": [
     {
-      "id": 1,
+      "id": "1",
       "agency": "1",
       "title": "ویلا لوکس",
       "location": "تهران",
@@ -36,7 +36,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "agency": "3",
       "title": "ویلا 500 متری زعفرانیه",
       "location": "تهران",
@@ -75,7 +75,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "agency": "3",
       "title": "آپارتمان تجاری 5 طبقه",
       "location": "تهران",
@@ -103,7 +103,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "agency": "2",
       "title": "اپارتمان90متری",
       "location": "آذربایجان شرقی",
@@ -131,7 +131,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "agency": "",
       "title": "فضای اداری شمال غربی",
       "location": "اصفهان",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "agency": "4",
       "title": "خانه ویلایی سبز مقرون به صرفه",
       "location": "یزد",
@@ -199,7 +199,7 @@
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "agency": "3",
       "title": "ملکی با نمای دریاچه مدرن",
       "location": "اصفهان",
@@ -228,7 +228,7 @@
       }
     },
     {
-      "id": 8,
+      "id": "8",
       "agency": "4",
       "title": "لوکس ترین ملک تجاری",
       "location": "آذربایجان شرقی",
@@ -256,7 +256,7 @@
       }
     },
     {
-      "id": 9,
+      "id": "9",
       "agency": "",
       "title": "خانه لوکس در تهران",
       "location": "تهران",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": 10,
+      "id": "10",
       "agency": "2",
       "title": "آپارتمان سه اتاقه",
       "location": "یزد",
@@ -313,7 +313,7 @@
       }
     },
     {
-      "id": 11,
+      "id": "11",
       "agency": "4",
       "title": "آپارتمان مدرن با تیرک",
       "location": "تهران",
@@ -341,7 +341,7 @@
       }
     },
     {
-      "id": 12,
+      "id": "12",
       "agency": "",
       "title": "مرکز خرید کاملا نو برای فروش",
       "location": "یزد",
@@ -376,7 +376,7 @@
       }
     },
     {
-      "id": 13,
+      "id": "13",
       "agency": "",
       "title": "خانه سه طبقه برای اجاره",
       "location": "اصفهان",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": 14,
+      "id": "14",
       "agency": "1",
       "title": "آپارتمان مجلل",
       "location": "آذربایجان شرقی",
@@ -440,7 +440,7 @@
       }
     },
     {
-      "id": 15,
+      "id": "15",
       "agency": "",
       "title": "آپارتمان شیک و زیبا",
       "location": "تهران",
@@ -479,10 +479,9 @@
       }
     }
   ],
-
   "agancies": [
     {
-      "id": 1,
+      "id": "1",
       "apecial": 1,
       "nameAg": "املاک ایران زمین",
       "Address": "تهران ، فرمانیه ، خیابان کاشانی ، جنب بانک ملی ایران",
@@ -495,7 +494,7 @@
       "logoAg": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/554995.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "special": 1,
       "nameAg": "آژانس املاک قاسمی",
       "Address": " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
@@ -508,7 +507,7 @@
       "logoAg": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/730157.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "apecial": 1,
       "nameAg": "املاک مهرآوران",
       "Address": " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
@@ -521,7 +520,7 @@
       "logoAg": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/453090.png"
     },
     {
-      "id": 4,
+      "id": "4",
       "apecial": 1,
       "nameAg": "آژانس هخامنش",
       "Address": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
@@ -534,10 +533,9 @@
       "logoAg": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/403490.png"
     }
   ],
-
   "articles": [
     {
-      "id": 1,
+      "id": "1",
       "title": "",
       "category": "",
       "cover": "",
@@ -548,49 +546,64 @@
       "LinkURL": ""
     }
   ],
-
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "PhoneNumber": "09376864726",
       "Email": "achaboutt@gmail.com",
       "FullName": "ابولفضل",
       "Password": "abolfazl1313",
       "dateOFregestration": "1403",
-      "PicProfile": ""
+      "PicProfile": "",
+      "myFavoratePr": []
     }
   ],
-
   "categoryArticle": [
-    { "id": 1, "cateName": "تحصیلات", "cateValue": "Education" },
-    { "id": 2, "cateName": "ساختمان", "cateValue": "Building" },
-    { "id": 3, "cateName": "سرگرمی", "cateValue": "Entertainment" },
-    { "id": 4, "cateName": "مشاوره املاک", "cateValue": "RealEstate" }
+    {
+      "id": "1",
+      "cateName": "تحصیلات",
+      "cateValue": "Education"
+    },
+    {
+      "id": "2",
+      "cateName": "ساختمان",
+      "cateValue": "Building"
+    },
+    {
+      "id": "3",
+      "cateName": "سرگرمی",
+      "cateValue": "Entertainment"
+    },
+    {
+      "id": "4",
+      "cateName": "مشاوره املاک",
+      "cateValue": "RealEstate"
+    }
   ],
   "TopAreas": [
     {
-      "id": 1,
+      "id": "1",
       "name": "تهران",
       "value": "tehran",
       "cover": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa44.jpg",
       "path": "tehran"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "یزد",
       "value": "yazd",
       "cover": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa42.jpg",
       "path": "tehran"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "آذربایجان شرقی",
       "value": "east-azarbaijan",
       "cover": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa43.jpg",
       "path": "azEast"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "اصفهان",
       "value": "esfahan",
       "cover": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa42.jpg",
@@ -599,48 +612,62 @@
   ],
   "whyUs": [
     {
-      "id": 1,
+      "id": "1",
       "titleBox": "مورد اجاره",
       "counter": 570,
       "textBox": "برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی است."
     },
     {
-      "id": 2,
+      "id": "2",
       "titleBox": "مورد خرید",
       "counter": 350,
       "textBox": "برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی است."
     },
     {
-      "id": 3,
+      "id": "3",
       "titleBox": "معامله موفق",
       "counter": 1250,
       "textBox": "برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی است."
     }
   ],
   "OurCapabilities": [
-    { "id": 1, "capability": "نیروی متخصص", "percentCapabilities": "90" },
-    { "id": 1, "capability": "املاک درجه یک", "percentCapabilities": "96" },
-    { "id": 1, "capability": "رعایت قوانین", "percentCapabilities": "92" }
+    {
+      "id": "1",
+      "capability": "نیروی متخصص",
+      "percentCapabilities": "90"
+    },
+    {
+      "id": "1",
+      "capability": "املاک درجه یک",
+      "percentCapabilities": "96"
+    },
+    {
+      "id": "1",
+      "capability": "رعایت قوانین",
+      "percentCapabilities": "92"
+    }
   ],
   "AddressUs&infoUs": [
     {
-      "id": 1,
+      "id": "1",
       "ourLocation": "تهران",
       "address": "خیابان ولیعصر - کوچه طراحان سایت - پلاک 1 - واحد 2",
       "ourTelephone": "23456789 - 021",
+      "email": "amlaki@gmail.com",
       "picOffice": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/conact-us-pic-1.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "ourLocation": "یزد",
       "address": "خیابان سلمان - مجموعه امیر چخماق - پلاک 3 - واحد 4",
       "ourTelephone": "12345678 - 035",
+      "email": "amlaki@gmail.com",
       "picOffice": "https://pre-websites.ir/elementor/realestate/wp-content/uploads/2021/12/villa36.jpg"
     }
   ],
   "PeoplesQuestions": [
     {
-      "id": 1,
+      "id": "1",
       "fullName": "",
       "phoneNumber": "",
       "email": "",
@@ -648,12 +675,24 @@
       "message": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "fullName": "",
       "phoneNumber": "",
       "email": "",
       "issue": "",
       "message": ""
     }
+  ],
+  "fastLinks": [
+    { "id": 1, "value": "صفحه اصلی", "link": "/" },
+    { "id": 2, "value": "آگهی ها", "link": "properties" },
+    { "id": 3, "value": "درباره ما", "link": "about-us" },
+    { "id": 4, "value": "تماس با ما", "link": "contact-us" },
+    { "id": 5, "value": "وبلاگ و مقالات", "link": "blog" },
+    { "id": 6, "value": "آژانس ها", "link": "agencies" },
+    { "id": 7, "value": "شرایط و ضوابط", "link": "/" },
+    { "id": 8, "value": "حساب کاربری", "link": "account" },
+    { "id": 9, "value": "علاقه مندی", "link": "account/favorates" },
+    { "id": 10, "value": "قوانین و مقررات", "link": "/" }
   ]
 }

@@ -197,8 +197,8 @@ export default function Properties() {
                   {dataProperties.map((property) =>
                     typeShow === "grid" ? (
                       <CartProperty
-                        aos="fade-up"
                         key={property.id}
+                        aos="fade-up"
                         {...property}
                         all={property}
                         img={property.images}
@@ -214,8 +214,8 @@ export default function Properties() {
                       />
                     ) : (
                       <CartProperty2
-                        aos="fade-up"
                         key={property.id}
+                        aos="fade-up"
                         {...property}
                         all={property}
                         img={property.images}

@@ -175,7 +175,7 @@ function Header() {
                     پنل کاربری
                   </NavLink>
                   <NavLink
-                    to="/favorates"
+                    to="/account/favorates"
                     className="c-gray-2 block px-3 py-2  font-light flex gap-2 items-center "
                   >
                     <FaHeart size="16px" />
