@@ -81,13 +81,16 @@ export default function BoxFilterPr() {
 
     // get number of rooms from url
     if (searchParams.get("bathrooms")) {
-       numberOfbathrooms.forEach((item, index) => {
+      numberOfbathrooms.forEach((item, index) => {
         if (item.name === searchParams.get("bathrooms").split("-").join(" ")) {
           setSelectedBathrooms(numberOfbathrooms[index]);
         }
       });
     }
   }, []);
+
+  // evant handler btn search
+  const serach_Filter_Handler = () => {};
 
   return (
     <div className="box-news-properties bg-white rounded-lg py-3 px-4">
@@ -179,7 +182,7 @@ export default function BoxFilterPr() {
                 value="آپارتمان"
                 name="default-radio"
                 class="w-4 h-4x"
-                ref={checkboxesType}
+                checked={searchParams.get("type") === "آپارتمان" ? true : false}
               />
               <label for="default-radio-1" class="ms-1 text-sm text-gray1">
                 آپارتمان
@@ -189,10 +192,10 @@ export default function BoxFilterPr() {
               <input
                 id="default-radio-2"
                 type="radio"
-                value=""
+                value="ویلا"
                 name="default-radio"
                 class="w-4 h-4x"
-                ref={checkboxesType}
+                checked={searchParams.get("type") === "ویلا" ? true : false}
               />
               <label for="default-radio-2" class="ms-1 text-sm text-gray1">
                 ویلا
@@ -202,10 +205,12 @@ export default function BoxFilterPr() {
               <input
                 id="default-radio-3"
                 type="radio"
-                value=""
+                value="ملک-تجاری"
                 name="default-radio"
                 class="w-4 h-4x"
-                ref={checkboxesType}
+                checked={
+                  searchParams.get("type") === "ملک-تجاری" ? true : false
+                }
               />
               <label for="default-radio-3" class="ms-1 text-sm text-gray1">
                 ملک تجاری
@@ -667,7 +672,11 @@ export default function BoxFilterPr() {
           )}
         </div>
       </div>
-      <button className="mt-5 w-full bg-myGreen-300 text-white rounded-lg py-3 ">
+      <button
+        type="button"
+        className="mt-5 w-full bg-myGreen-300 text-white rounded-lg py-3"
+        onClick={serach_Filter_Handler}
+      >
         جستجو
       </button>
     </div>

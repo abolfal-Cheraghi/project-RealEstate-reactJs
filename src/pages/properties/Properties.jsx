@@ -24,6 +24,7 @@ import BoxNewProperties from "../../components/boxNewProperties/BoxNewProperties
 import ReactPaginate from "react-paginate";
 import BoxFilterPr from "../../components/boxFilterPr/BoxFilterPr";
 import BoxBanner1 from "../../components/boxBanner1/BoxBanner1";
+import LoadingPr from "../../components/loadingPr/LoadingPr";
 
 export default function Properties() {
   // locatios and query URL
@@ -56,6 +57,7 @@ export default function Properties() {
     if (findNameArea(params["*"]) === "" && searchParams.size == 0) {
       axios.get(`http://localhost:5000/properties`).then((res) => {
         setDataProperties(res.data);
+        setIsPending(false);
       });
     } else if (findNameArea(params["*"]) !== "" && searchParams.size === 0) {
       let pathFilter = findNameArea(params["*"]);
@@ -64,6 +66,7 @@ export default function Properties() {
         .get(`http://localhost:5000/properties/?location=${pathFilter}`)
         .then((res) => {
           setDataProperties(res.data);
+          setIsPending(false);
         });
       // if url has any query
     } else if (searchParams.size > 0 && findNameArea(params["*"]) === "") {
@@ -96,6 +99,7 @@ export default function Properties() {
         )
         .then((res) => {
           setDataProperties(res.data);
+          setIsPending(false);
         });
     }
     // if url has a location and any query
@@ -129,6 +133,7 @@ export default function Properties() {
         )
         .then((res) => {
           setDataProperties(res.data);
+          setIsPending(false);
         });
     }
   }, [params]);
@@ -183,8 +188,11 @@ export default function Properties() {
                   </div>
                 )}
               </div>
-              {/* if length property object === 0 */}
-              {dataProperties.length === 0 ? (
+              {/* if is pending = true , show loading */}
+              {isPending ? (
+                <LoadingPr />
+              ) : //  if length property object === 0
+              dataProperties.length === 0 ? (
                 // component not found properties
                 <NotFound />
               ) : (

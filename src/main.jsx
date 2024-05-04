@@ -6,6 +6,9 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import MyProvider from "./context/MyProvider.jsx";
 
+// toastify
+import "react-toastify/dist/ReactToastify.css";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <MyProvider>

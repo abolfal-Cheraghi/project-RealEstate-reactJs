@@ -93,3 +93,10 @@ progress::-webkit-progress-value {
   margin: 0 !important;
   height: min-content;
 }
+
+
+/* Toastify alert*/
+.Toastify__toast{
+  direction: rtl !important;
+  font-family: var(--medium) !important;
+}

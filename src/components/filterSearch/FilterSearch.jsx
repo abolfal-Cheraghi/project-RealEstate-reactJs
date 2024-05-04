@@ -5,24 +5,55 @@ import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { StateProperties } from "../../data/dataFilter";
 import { cityProperties } from "../../data/dataFilter";
 import { optionsProperty } from "../../data/dataFilter";
+import { useNavigate } from "react-router-dom";
+
+import { ToastContainer, toast } from "react-toastify";
 
 export default function FilterSearch() {
   const [selectedState, setSelectedState] = useState(StateProperties[0]);
   const [selectedCity, setSelectedCity] = useState(cityProperties[0]);
+  const [chckedRadioType, setChckedRadioType] = useState(null);
+  const navigate = useNavigate();
 
+  // event change handler radio buttons
+  const changeRadioHandler = (e) => {
+    setChckedRadioType(e.target.value);
+  };
+
+  // event handler btn search
+  const serachHandler = () => {
+    if (
+      selectedCity !== cityProperties[0] &&
+      selectedState !== selectedState[0] &&
+      chckedRadioType !== null
+    ) {
+      navigate(
+        `/properties/${selectedCity.path}?for=${selectedState.name}&type=${chckedRadioType}`
+      );
+    } else {
+      toast.error("کامل انتخاب کنید که چه ملکی مد نظرتونه !", {
+        position: "bottom-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
   return (
-    <form
-      action="/properties"
-      className="w-full flex flex-col items-center justify-center"
-    >
+    <form className="w-full flex flex-col items-center justify-center">
       <div className="flex gap-7">
         <div class="flex items-center mb-4">
           <input
             id="default-radio-1"
             type="radio"
             value="آپارتمان"
-            name="default-radio"
+            name="type"
             class="w-4 h-4x"
+            onChange={changeRadioHandler}
           />
           <label for="default-radio-1" class="ms-2 text-sm c-white">
             آپارتمان
@@ -32,9 +63,10 @@ export default function FilterSearch() {
           <input
             id="default-radio-2"
             type="radio"
-            value=""
-            name="default-radio"
+            value="ویلا"
+            name="type"
             class="w-4 h-4x"
+            onChange={changeRadioHandler}
           />
           <label for="default-radio-2" class="ms-2 text-sm c-white">
             ویلا
@@ -44,9 +76,10 @@ export default function FilterSearch() {
           <input
             id="default-radio-3"
             type="radio"
-            value=""
-            name="default-radio"
+            value="ملک-تجاری"
+            name="type"
             class="w-4 h-4x"
+            onChange={changeRadioHandler}
           />
           <label for="default-radio-3" class="ms-2 text-sm c-white">
             ملک تجاری
@@ -222,10 +255,15 @@ export default function FilterSearch() {
           </Listbox>
         </div>
         <div>
-          <button className="btn-search-filter c-white shadow-2xl h-12 px-10 rounded-l-xl">
+          <button
+            type="button"
+            className="btn-search-filter bg-myGreen-300 c-white shadow-2xl h-12 px-10 rounded-l-xl"
+            onClick={serachHandler}
+          >
             جستجو
           </button>
         </div>
+        <ToastContainer />
       </div>
     </form>
   );
